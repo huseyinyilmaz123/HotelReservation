@@ -9,27 +9,23 @@ namespace DataAccess.Concrete.EntityFramework
 {
     public class EfPaymentDal : IPaymentDal
     {
-        public void Add()
+        public void Add(Payment entity)
         {
             throw new NotImplementedException();
         }
 
-        public void Delete(Payment customer)
+        public void Delete(Payment entity)
         {
             throw new NotImplementedException();
         }
 
-        public List<Payment> GetAll()
-        {
-            throw new NotImplementedException();
-        }
 
         public List<Payment> GetAll(Expression<Func<Payment, bool>> filter = null)
         {
             throw new NotImplementedException();
         }
 
-        public void Update(Payment customer)
+        public void Update(Payment entity)
         {
             throw new NotImplementedException();
         }

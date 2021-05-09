@@ -9,17 +9,12 @@ namespace DataAccess.Concrete.EntityFramework
 {
     public class EfRoomDal : IRoomDal
     {
-        public void Add()
+        public void Add(Room entity)
         {
             throw new NotImplementedException();
         }
 
-        public void Delete(Room customer)
-        {
-            throw new NotImplementedException();
-        }
-
-        public List<Room> GetAll()
+        public void Delete(Room entity)
         {
             throw new NotImplementedException();
         }
@@ -29,7 +24,7 @@ namespace DataAccess.Concrete.EntityFramework
             throw new NotImplementedException();
         }
 
-        public void Update(Room customer)
+        public void Update(Room entity)
         {
             throw new NotImplementedException();
         }

@@ -9,17 +9,12 @@ namespace DataAccess.Concrete.EntityFramework
 {
     public class EfUserDal : IUserDal
     {
-        public void Add()
+        public void Add(User entity)
         {
             throw new NotImplementedException();
         }
 
-        public void Delete(User customer)
-        {
-            throw new NotImplementedException();
-        }
-
-        public List<User> GetAll()
+        public void Delete(User entity)
         {
             throw new NotImplementedException();
         }
@@ -29,7 +24,7 @@ namespace DataAccess.Concrete.EntityFramework
             throw new NotImplementedException();
         }
 
-        public void Update(User customer)
+        public void Update(User entity)
         {
             throw new NotImplementedException();
         }
