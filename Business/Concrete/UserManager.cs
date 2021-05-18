@@ -1,4 +1,5 @@
 ﻿using Business.Abstract;
+using DataAccess.Abstract;
 using Entities.Concrete;
 using System;
 using System.Collections.Generic;
@@ -8,19 +9,24 @@ namespace Business.Concrete
 {
     public class UserManager : IUserService
     {
+        IUserDal _userDal;
+        public UserManager(IUserDal userDal)
+        {
+            _userDal = userDal;
+        }
         public void Add(User user)
         {
-            throw new NotImplementedException();
+            _userDal.Add(user);
         }
 
         public void Delete(User user)
         {
-            throw new NotImplementedException();
+            _userDal.Delete(user);
         }
 
         public void Update(User user)
         {
-            throw new NotImplementedException();
+            _userDal.Update(user);
         }
     }
 }
