@@ -7,26 +7,8 @@ using System.Text;
 
 namespace DataAccess.Concrete.EntityFramework
 {
-    public class EfRoomDal : IRoomDal
+    public class EfRoomDal : EfBaseDal<Room>, IRoomDal
     {
-        public void Add(Room entity)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void Delete(Room entity)
-        {
-            throw new NotImplementedException();
-        }
-
-        public List<Room> GetAll(Expression<Func<Room, bool>> filter = null)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void Update(Room entity)
-        {
-            throw new NotImplementedException();
-        }
+       
     }
 }

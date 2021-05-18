@@ -15,9 +15,24 @@ namespace Business.Concrete
             _customerDal = customerDal;
         }
 
+        public void Add(Customer customer)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Delete(Customer customer)
+        {
+            throw new NotImplementedException();
+        }
+
         public List<Customer> GetAll()
         {
             return _customerDal.GetAll();
+        }
+
+        public void Update(Customer customer)
+        {
+            throw new NotImplementedException();
         }
     }
 }

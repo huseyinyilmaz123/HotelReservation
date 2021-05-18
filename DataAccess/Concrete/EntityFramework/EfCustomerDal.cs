@@ -9,46 +9,8 @@ using System.Text;
 
 namespace DataAccess.Concrete.EntityFramework
 {
-    public class EfCustomerDal : ICustomerDal
+    public class EfCustomerDal : EfBaseDal<Customer>, ICustomerDal
     {
-
-        public void Add(Customer entity)
-        {
-            using (HotelContext context = new HotelContext())
-            {
-                var addedEntity = context.Entry(entity);
-                addedEntity.State = EntityState.Added;
-                context.SaveChanges();
-            }
-        }
-
-        public void Delete(Customer entity)
-        {
-            using (HotelContext context = new HotelContext())
-            {
-                var deletedEntity = context.Entry(entity);
-                deletedEntity.State = EntityState.Deleted;
-                context.SaveChanges();
-            }
-        }
-
-
-        public List<Customer> GetAll(Expression<Func<Customer, bool>> filter = null)
-        {
-            using (HotelContext context=new HotelContext())
-            {
-                return filter == null ? context.Set<Customer>().ToList() : context.Set<Customer>().Where(filter).ToList();
-            }
-        }
-
-        public void Update(Customer entity)
-        {
-            using (HotelContext context = new HotelContext())
-            {
-                var updateEntity = context.Entry(entity);
-                updateEntity.State = EntityState.Modified;
-                context.SaveChanges();
-            }
-        }
+        
     }
 }
