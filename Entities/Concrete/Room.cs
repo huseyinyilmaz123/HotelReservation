@@ -12,5 +12,6 @@ namespace Entities.Concrete
         public int Floor { get; set; }
         public int Price { get; set; }
         public int RoomNo { get; set; }
+        public int Fullness { get; set; }
     }
 }
