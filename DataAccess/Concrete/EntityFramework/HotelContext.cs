@@ -11,8 +11,8 @@ namespace DataAccess.Concrete.EntityFramework
     {
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer(@"Server=(localdb)\msssqllocaldb;Database=Hotel_DataBase;Trusted_Connection=true");
-            
+            optionsBuilder.UseSqlServer(@"Server=(localdb)\mssqllocaldb;Database=Hotel_DataBase;Trusted_Connection=true");
+
         }
         public DbSet<Customer> CUSTOMER_REGISTRATIONS { get; set; }
         public DbSet<Payment> PAYMENT_REGISTRATION { get; set; }
