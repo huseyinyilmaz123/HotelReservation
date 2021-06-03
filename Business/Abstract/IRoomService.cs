@@ -8,5 +8,6 @@ namespace Business.Abstract
     public interface IRoomService
     {
         List<Room> GetAll();
+        Room Get(int roomNo);
     }
 }
