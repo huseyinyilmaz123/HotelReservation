@@ -16,7 +16,7 @@ namespace DataAccess.Concrete.EntityFramework
         }
         public DbSet<Customer> CUSTOMER_REGISTRATIONS { get; set; }
         public DbSet<Payment> PAYMENT_REGISTRATION { get; set; }
-        public DbSet<Room> ROOM_INFORMATION { get; set; }
+        public DbSet<Room>  ROOM_INFORMATION { get; set; }
         public DbSet<User> USERS { get; set; }
 
     }

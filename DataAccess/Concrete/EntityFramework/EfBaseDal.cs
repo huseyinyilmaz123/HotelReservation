@@ -48,5 +48,14 @@ namespace DataAccess.Concrete.EntityFramework
                 context.SaveChanges();
             }
         }
+
+        public TEntity Get(Expression<Func<TEntity, bool>> filter)
+        {
+            using (HotelContext context = new HotelContext())
+            {
+                TEntity entity = context.Set<TEntity>().SingleOrDefault(filter);
+                return entity;
+            }
+        }
     }
 }

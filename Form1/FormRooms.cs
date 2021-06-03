@@ -1,4 +1,7 @@
-﻿using System;
+﻿using Business.Concrete;
+using DataAccess.Concrete.EntityFramework;
+using Entities.Concrete;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -24,10 +27,6 @@ namespace Form1
             this.labelTime.Text = dateTime.ToString();
         }
 
-        private void FormRooms_Load(object sender, EventArgs e)
-        {
-
-        }
 
         private void buttonBack_Click(object sender, EventArgs e)
         {
@@ -36,43 +35,21 @@ namespace Form1
             fmp.Show();
         }
 
-        private void label2_Click(object sender, EventArgs e)
+        private void btnRoom401_Click(object sender, EventArgs e)
         {
+            //seçilen buton ile alakalı işlemlerin yapılmasını sağlar
+            Button curButton = sender as Button;
+            int selectedRoomNo = Convert.ToInt32(curButton.Tag.ToString());
 
-        }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
 
-        }
-
-        private void labelTime_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button11_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void label1_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label9_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
+            RoomManager roomManager = new RoomManager(new EfRoomDal());
+            Room room1 = new Room();
+            room1 = roomManager.Get(selectedRoomNo);
+            lblRoomNo.Text = room1.RoomNo.ToString();
+            lblPrice.Text = room1.Price.ToString();
+            lblFloorNo.Text = room1.Floor.ToString();
+            lblAvailability.Text = room1.Fullness == 0 ? "Available" : "NotAvailable";
 
         }
     }
